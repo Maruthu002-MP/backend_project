@@ -13,6 +13,7 @@ exports.getCategories = async (req, res) => {
   res.json(categories);
 };
 
+// delete categories
 exports.deleteCategory = async (req, res) => {
   await Category.findByIdAndDelete(req.params.id);
   res.status(204).end();
